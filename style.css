@@ -42,6 +42,11 @@ body {
     color: white;
 }
 
+.filter-btn:hover {
+    background: tomato;
+    color: white;
+
+
 .video-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
