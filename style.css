@@ -97,6 +97,9 @@ body {
 .social-icons a:hover {
     color: #ff0000;
 }
+.sepertor{
+display:none;
+}
 
 @media (max-width: 768px) {
     .video-grid {
