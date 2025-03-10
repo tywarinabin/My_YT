@@ -30,6 +30,10 @@
                 <i class="fas fa-music"></i>
                 Entertainment
             </button>
+             <button class="filter-btn" onclick="checkKey()" >
+                <i class="fas fa-music"></i>
+                Secret Page
+            </button>
         </div>
 
         <div class="video-grid" id="videoContainer">
@@ -146,6 +150,16 @@
                 });
             }
         });
+         function checkKey() {
+            const correctKey = "777777";
+            let userKey = prompt("Enter the key to proceed:");
+
+            if (userKey === correctKey) {
+                window.location.href = "next.html";
+            } else {
+                alert("Incorrect key! Please try again.");
+            }
+        }
     </script>
 </body>
 </html>
