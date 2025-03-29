@@ -3,148 +3,212 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video Gallery</title>
+    <title>VideoVerse | Curated Video Gallery</title>
+    <meta name="description" content="Discover amazing videos across different categories">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <div class="filter-buttons">
-            <button class="filter-btn active" data-filter="all">
-                <i class="fas fa-globe"></i>
-                All
-            </button>
-            <button class="filter-btn" data-filter="music">
-                <i class="fas fa-music"></i>
-                Music
-            </button>
-            <button class="filter-btn" data-filter="bhajan">
-                <i class="fas fa-pray"></i>
-                Bhajan
-            </button>
-            <button class="filter-btn" data-filter="sports">
-                <i class="fas fa-football"></i>
-                Sports
-            </button>
-            <button class="filter-btn" data-filter="entertainment">
-                <i class="fas fa-music"></i>
-                Entertainment
-            </button>
-             <button class="filter-btn" onclick="checkKey()" style="background-color: green;"  >
-                <i class="fas fa-lock"></i>
-               🔒 Secret Page 🔒
-            </button>
+    <header class="main-header">
+        <div class="container">
+            <h1><i class="fas fa-play-circle"></i> VideoVerse</h1>
+            <p class="tagline">Your curated collection of amazing videos</p>
         </div>
+    </header>
 
-        <div class="video-grid" id="videoContainer">
-            <!-- Music Video -->
-            <div class="video-card" data-tag="music">
-                <div class="thumbnail-container">
-                    <iframe src="https://www.youtube.com/embed/jh2LJVDtGIY" 
-                            title="Namami Shamishan" 
-                            frameborder="0" 
-                            allowfullscreen>
-                    </iframe>
-                </div>
+    <main class="container">
+        <section class="filter-section">
+            <h2 class="section-title">Explore Categories</h2>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">
+                    <i class="fas fa-globe"></i>
+                    All Videos
+                </button>
+                <button class="filter-btn" data-filter="music">
+                    <i class="fas fa-music"></i>
+                    Music
+                </button>
+                <button class="filter-btn" data-filter="bhajan">
+                    <i class="fas fa-praying-hands"></i>
+                    Bhajan
+                </button>
+                <button class="filter-btn" data-filter="sports">
+                    <i class="fas fa-running"></i>
+                    Sports
+                </button>
+                <button class="filter-btn" data-filter="entertainment">
+                    <i class="fas fa-film"></i>
+                    Entertainment
+                </button>
+                <button class="filter-btn secret-btn" onclick="checkKey()">
+                    <i class="fas fa-lock"></i>
+                    Secret Content
+                </button>
             </div>
-             <div class="video-card" data-tag="music">
-                <div class="thumbnail-container">
-                    <iframe width="853" height="480" src="https://www.youtube.com/embed/5Eqb_-j3FDA" 
-                title="Coke Studio | Season 14 | Pasoori | Ali Sethi x Shae Gill" frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media;
-                gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </section>
+
+        <section class="video-gallery">
+            <div class="video-grid" id="videoContainer">
+                <!-- Music Videos -->
+                <article class="video-card" data-tag="music">
+                    <div class="thumbnail-container">
+                        <iframe src="https://www.youtube.com/embed/jh2LJVDtGIY" 
+                                title="Namami Shamishan" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                        </iframe>
                     </div>
-            </div>
-            <!-- Bhajan Video -->
-            <div class="video-card" data-tag="bhajan">
-                <div class="thumbnail-container">
-                    <iframe width="1097" height="423" src="https://www.youtube.com/embed/OXm4-3Er8po?list=RDOXm4-3Er8po"
-                        title="Radhe Radhe - राधे राधे - Official Music Video | Hansraj Raghuwanshi | Mista Baaz | iSur" frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;
-                        web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-            </div>
+                    <div class="video-info">
+                        <h3>Namami Shamishan</h3>
+                        <div class="video-meta">
+                            <span><i class="fas fa-eye"></i> 1.2M views</span>
+                            <span><i class="fas fa-thumbs-up"></i> 95%</span>
+                        </div>
+                    </div>
+                </article>
 
-            <!-- Sports Video -->
-            <div class="video-card" data-tag="sports">
-                <div class="thumbnail-container">
-                    <iframe src="https://www.youtube.com/embed/EXAMPLE_SPORTS" 
-                            title="Sports Example" 
-                            frameborder="0" 
-                            allowfullscreen>
-                    </iframe>
-                </div>
-            </div>
-            <div class="video-card" data-tag="sports">
-                <div class="thumbnail-container">
-                    <iframe src="https://www.youtube.com/embed/EXAMPLE_SPORTS" 
-                            title="Sports Example" 
-                            frameborder="0" 
-                            allowfullscreen>
-                    </iframe>
-                </div>
-            </div>
-            <div class="video-card" data-tag="entertainment">
-                <div class="thumbnail-container">
-                    <iframe src="https://www.youtube.com/embed/EXAMPLE_SPORTS" 
-                            title="Sports Example" 
-                            frameborder="0" 
-                            allowfullscreen>
-                    </iframe>
-                </div>
-            </div>
+                <article class="video-card" data-tag="music">
+                    <div class="thumbnail-container">
+                        <iframe src="https://www.youtube.com/embed/5Eqb_-j3FDA" 
+                                title="Coke Studio | Season 14 | Pasoori | Ali Sethi x Shae Gill" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3>Pasoori - Coke Studio</h3>
+                        <div class="video-meta">
+                            <span><i class="fas fa-eye"></i> 350M views</span>
+                            <span><i class="fas fa-thumbs-up"></i> 98%</span>
+                        </div>
+                    </div>
+                </article>
 
-             <div class="video-card" data-tag="bhajan">
-                <div class="thumbnail-container">
-             <iframe width="783" height="440" src="https://www.youtube.com/embed/52P_CbO30k4" 
-                 title="SHRI HANUMAN AMRITWANI IN PARTS Part 4 by ANURADHA PAUDWAL I Full Video Song" 
-                 frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;
-                 picture-in-picture; 
-                 web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                  </div>
-            </div>
-            <div class="video-card" data-tag="bhajan">
-                <div class="thumbnail-container">
-             <iframe width="783" height="440" src="https://www.youtube.com/embed/Hy55Ij78amM" 
-                 title="Hey Ram Hey Ram - Shri Ram Dhun | Jagjit Singh | हे राम हे राम | Sudarshan Faakir" 
-                 frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
-                 gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" 
-                 allowfullscreen></iframe>
+                <!-- Bhajan Videos -->
+                <article class="video-card" data-tag="bhajan">
+                    <div class="thumbnail-container">
+                        <iframe src="https://www.youtube.com/embed/OXm4-3Er8po?list=RDOXm4-3Er8po"
+                                title="Radhe Radhe - राधे राधे - Official Music Video | Hansraj Raghuwanshi | Mista Baaz | iSur" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3>Radhe Radhe Bhajan</h3>
+                        <div class="video-meta">
+                            <span><i class="fas fa-eye"></i> 45M views</span>
+                            <span><i class="fas fa-thumbs-up"></i> 99%</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="video-card" data-tag="bhajan">
+                    <div class="thumbnail-container">
+                        <iframe src="https://www.youtube.com/embed/52P_CbO30k4" 
+                                title="SHRI HANUMAN AMRITWANI IN PARTS Part 4 by ANURADHA PAUDWAL I Full Video Song" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3>Hanuman Amritwani</h3>
+                        <div class="video-meta">
+                            <span><i class="fas fa-eye"></i> 28M views</span>
+                            <span><i class="fas fa-thumbs-up"></i> 97%</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Sports Videos -->
+                <article class="video-card" data-tag="sports">
+                    <div class="thumbnail-container">
+                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                                title="Amazing Sports Moments" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3>Top Sports Highlights</h3>
+                        <div class="video-meta">
+                            <span><i class="fas fa-eye"></i> 5.7M views</span>
+                            <span><i class="fas fa-thumbs-up"></i> 92%</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Entertainment Videos -->
+                <article class="video-card" data-tag="entertainment">
+                    <div class="thumbnail-container">
+                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                                title="Entertainment Compilation" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3>Funny Moments Compilation</h3>
+                        <div class="video-meta">
+                            <span><i class="fas fa-eye"></i> 12.3M views</span>
+                            <span><i class="fas fa-thumbs-up"></i> 94%</span>
+                        </div>
+                    </div>
+                </article>
+
+                <div class="separator">
+                    <hr>
+                    <p>More Videos Coming Soon</p>
+                    <hr>
                 </div>
+
+                <article class="video-card" data-tag="your-interest">
+                    <div class="thumbnail-container placeholder">
+                        <div class="add-video-prompt">
+                            <i class="fas fa-plus-circle"></i>
+                            <p>Add Your Favorite Video</p>
+                        </div>
+                    </div>
+                    <div class="video-info">
+                        <h3>Your Recommendation</h3>
+                        <div class="video-meta">
+                            <span>Be the first to suggest</span>
+                        </div>
+                    </div>
+                </article>
             </div>
-            
-             <div class ="seperator" > --------------------------------------------------------------------------------</div>
+        </section>
+    </main>
 
-
-            
-              <div class="video-card sepertor" data-tag="your intrest">
-                <div class="thumbnail-container">
-             // Iframe Tag of the YT Video.
-                    
-                    
-                </div>
+    <footer class="main-footer">
+        <div class="container">
+            <div class="social-links">
+                <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
             </div>
-
-            <div class ="seperator" > --------------------------------------------------------------------------------</div>
+            <p class="copyright">&copy; 2023 VideoVerse. All rights reserved.</p>
         </div>
-
-        <div class="social-icons">
-            <a href="#"><i class="fab fa-youtube"></i></a>
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-        </div>
-    </div>
+    </footer>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const filterButtons = document.querySelectorAll('.filter-btn');
             const videoContainer = document.getElementById('videoContainer');
             const allVideos = Array.from(document.querySelectorAll('.video-card'));
-    
+
             // Initial show all videos
             showVideos('all');
-    
+
             filterButtons.forEach(button => {
                 button.addEventListener('click', () => {
                     const filter = button.dataset.filter;
@@ -157,30 +221,31 @@
                     showVideos(filter);
                 });
             });
-    
+
             function showVideos(filter) {
                 // Clear existing videos
                 videoContainer.innerHTML = '';
-    
+
                 // Filter and show videos
                 const filteredVideos = allVideos.filter(video => {
                     return filter === 'all' || video.dataset.tag === filter;
                 });
-    
+
                 // Re-append filtered videos
                 filteredVideos.forEach(video => {
                     videoContainer.appendChild(video.cloneNode(true));
                 });
             }
         });
-         function checkKey() {
+
+        function checkKey() {
             const correctKey = "777777";
-            let userKey = prompt("Enter the key to proceed:");
+            let userKey = prompt("Enter the secret key to access exclusive content:");
 
             if (userKey === correctKey) {
-                window.location.href = "next.html";
+                window.location.href = "secret.html";
             } else {
-                alert("Incorrect key! Please try again.");
+                alert("Incorrect key! Please try again or contact support.");
             }
         }
     </script>

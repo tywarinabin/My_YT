@@ -1,3 +1,15 @@
+/* Base Styles */
+:root {
+    --primary-color: #4a6bff;
+    --secondary-color: #ff6b6b;
+    --dark-color: #2c3e50;
+    --light-color: #f8f9fa;
+    --success-color: #28a745;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -6,69 +18,80 @@
 }
 
 body {
-    background: #0f0f0f;
-    color: #ffffff;
+    background-color: #f5f7ff;
+    color: #333;
+    line-height: 1.6;
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 20px;
 }
 
+/* Filter Buttons */
 .filter-buttons {
     display: flex;
-    gap: 1rem;
-    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
     justify-content: center;
 }
 
 .filter-btn {
-    padding: 0.8rem 1.5rem;
-    border: none;
-    border-radius: 25px;
-    background: #252525;
-    color: #ffffff;
-    cursor: pointer;
-    transition: all 0.3s ease;
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 8px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: var(--border-radius);
+    background-color: var(--light-color);
+    color: var(--dark-color);
+    cursor: pointer;
+    transition: var(--transition);
+    font-weight: 600;
+    box-shadow: var(--box-shadow);
 }
 
-.filter-btn.active,
 .filter-btn:hover {
-    background: #ff0000;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.filter-btn.active {
+    background-color: var(--primary-color);
     color: white;
 }
 
-.filter-btn:hover {
-    background: crimson;
-    color: white;
+.filter-btn i {
+    font-size: 1.1rem;
 }
 
+/* Video Grid */
 .video-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
 }
 
 .video-card {
-    background: #1a1a1a;
-    border-radius: 12px;
+    background: white;
+    border-radius: var(--border-radius);
     overflow: hidden;
-    transition: transform 0.3s ease;
-    position: relative;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
 }
 
 .video-card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
 .thumbnail-container {
     position: relative;
-    padding-top: 56.25%;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
     overflow: hidden;
 }
 
@@ -81,32 +104,89 @@ body {
     border: none;
 }
 
+.seperator {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: #ccc;
+    margin: 20px 0;
+    font-size: 1.5rem;
+}
+
+/* Social Icons */
 .social-icons {
     display: flex;
-    gap: 1rem;
-    margin-top: 2rem;
     justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
 }
 
 .social-icons a {
-    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: white;
     font-size: 1.5rem;
-    transition: color 0.3s ease;
+    transition: var(--transition);
+    box-shadow: var(--box-shadow);
 }
 
 .social-icons a:hover {
-    color: #ff0000;
-}
-.sepertor{
-display:none;
+    transform: translateY(-3px);
+    background-color: var(--secondary-color);
 }
 
+/* Secret Button */
+.filter-btn[style*="green"] {
+    background-color: var(--success-color) !important;
+    color: white;
+}
+
+.filter-btn[style*="green"]:hover {
+    background-color: #218838 !important;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
+    .filter-buttons {
+        gap: 8px;
+    }
+    
+    .filter-btn {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+    
+    .video-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .filter-buttons {
+        gap: 6px;
+    }
+    
+    .filter-btn {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+    
     .video-grid {
         grid-template-columns: 1fr;
     }
     
-    .filter-buttons {
-        flex-wrap: wrap;
+    .social-icons {
+        gap: 15px;
+    }
+    
+    .social-icons a {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
     }
 }
