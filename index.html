@@ -3,12 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video Gallery</title>
+    <title>YouTube Playlist Gallery</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
+        <header>
+            <h1>YouTube Playlist Gallery</h1>
+            <p>Browse videos by category</p>
+        </header>
+
         <div class="filter-buttons">
             <button class="filter-btn active" data-filter="all">
                 <i class="fas fa-globe"></i>
@@ -23,142 +29,21 @@
                 Bhajan
             </button>
             <button class="filter-btn" data-filter="sports">
-                <i class="fas fa-football"></i>
+                <i class="fas fa-football-ball"></i>
                 Sports
             </button>
             <button class="filter-btn" data-filter="entertainment">
-                <i class="fas fa-music"></i>
+                <i class="fas fa-film"></i>
                 Entertainment
             </button>
-           <button class="filter-btn" data-filter="education">
-                <i class="fas fa-music"></i>
+            <button class="filter-btn" data-filter="education">
+                <i class="fas fa-graduation-cap"></i>
                 Education
             </button>
         </div>
 
         <div class="video-grid" id="videoContainer">
-            <!-- Music Video -->
-            <div class="video-card" data-tag="music">
-                <div class="thumbnail-container">
-                    <iframe src="https://www.youtube.com/embed/jh2LJVDtGIY" 
-                            title="Namami Shamishan" 
-                            frameborder="0" 
-                            allowfullscreen>
-                    </iframe>
-                </div>
-            </div>
-             <div class="video-card" data-tag="music">
-                <div class="thumbnail-container">
-                    <iframe width="853" height="480" src="https://www.youtube.com/embed/5Eqb_-j3FDA" 
-                title="Coke Studio | Season 14 | Pasoori | Ali Sethi x Shae Gill" frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media;
-                gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
-            </div>
-            <!-- Bhajan Video -->
-            <div class="video-card" data-tag="bhajan">
-                <div class="thumbnail-container">
-                    <iframe width="1097" height="423" src="https://www.youtube.com/embed/OXm4-3Er8po?list=RDOXm4-3Er8po"
-                        title="Radhe Radhe - राधे राधे - Official Music Video | Hansraj Raghuwanshi | Mista Baaz | iSur" frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;
-                        web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-            </div>
-
-            <!-- Sports Video -->
-            <div class="video-card" data-tag="sports">
-                <div class="thumbnail-container">
-                    <iframe src="https://www.youtube.com/embed/EXAMPLE_SPORTS" 
-                            title="Sports Example" 
-                            frameborder="0" 
-                            allowfullscreen>
-                    </iframe>
-                </div>
-            </div>
-            <div class="video-card" data-tag="sports">
-                <div class="thumbnail-container">
-                    <iframe src="https://www.youtube.com/embed/EXAMPLE_SPORTS" 
-                            title="Sports Example" 
-                            frameborder="0" 
-                            allowfullscreen>
-                    </iframe>
-                </div>
-            </div>
-            <div class="video-card" data-tag="entertainment">
-                <div class="thumbnail-container">
-                    <iframe src="https://www.youtube.com/embed/EXAMPLE_SPORTS" 
-                            title="Sports Example" 
-                            frameborder="0" 
-                            allowfullscreen>
-                    </iframe>
-                </div>
-            </div>
-
-             <div class="video-card" data-tag="bhajan">
-                <div class="thumbnail-container">
-             <iframe width="783" height="440" src="https://www.youtube.com/embed/52P_CbO30k4" 
-                 title="SHRI HANUMAN AMRITWANI IN PARTS Part 4 by ANURADHA PAUDWAL I Full Video Song" 
-                 frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;
-                 picture-in-picture; 
-                 web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                  </div>
-            </div>
-            <div class="video-card" data-tag="bhajan">
-                <div class="thumbnail-container">
-             <iframe width="783" height="440" src="https://www.youtube.com/embed/Hy55Ij78amM" 
-                 title="Hey Ram Hey Ram - Shri Ram Dhun | Jagjit Singh | हे राम हे राम | Sudarshan Faakir" 
-                 frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
-                 gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" 
-                 allowfullscreen></iframe>
-                </div>
-            </div>
-
-             <div class="video-card" data-tag="music">
-                <div class="thumbnail-container">
-                <iframe width="783" height="440" src="https://www.youtube.com/embed/UVvXK1rq3ZU?list=RDUVvXK1rq3ZU" 
-                    title="Kalo Keshma Relimai - Dinesh Dhakal (Lyrics)" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
-                    encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" 
-                    allowfullscreen></iframe>
-                </div>
-            </div>
-
-              <div class="video-card" data-tag="music">
-                <div class="thumbnail-container">
-              <iframe width="783" height="440" src="https://www.youtube.com/embed/IySf4-aX_lM?list=RDIySf4-aX_lM"
-                  title="New Nepali Movie - &quot;Shatru Gate&quot; Song || Piratiko Barko || Kali Prasad Ft. Paul, Aanchal" 
-                  frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;
-                  picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-            </div>
-              <div class="video-card" data-tag="education">
-                <div class="thumbnail-container">
-              <iframe width="738" height="415" src="https://www.youtube.com/embed/wjZofJX0v4M" 
-                  title="Transformers, the tech behind LLMs | Deep Learning Chapter 5" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
-                  encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>      
-                </div>
-            </div>
-
-            <div class="video-card" data-tag="education">
-                <div class="thumbnail-container">
-             <iframe width="738" height="415" src="https://www.youtube.com/embed/IHZwWFHWa-w"
-                 title="Gradient descent, how neural networks learn | Deep Learning Chapter 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
-                 encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>     
-                </div>
-            </div>
-            
-             <div class ="seperator" > --------------------------------------------------------------------------------</div>
-
-
-            
-              <div class="video-card sepertor" data-tag="your intrest">
-                <div class="thumbnail-container">
-             // Iframe Tag of the YT Video.
-                    
-                    
-                </div>
-            </div>
-
-            <div class ="seperator" > --------------------------------------------------------------------------------</div>
+            <!-- Videos will be loaded from videos.js -->
         </div>
 
         <div class="social-icons">
@@ -169,56 +54,7 @@
         </div>
     </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const filterButtons = document.querySelectorAll('.filter-btn');
-            const videoContainer = document.getElementById('videoContainer');
-            const allVideos = Array.from(document.querySelectorAll('.video-card'));
-    
-            // Initial show all videos
-            showVideos('all');
-    
-            filterButtons.forEach(button => {
-                button.addEventListener('click', () => {
-                    const filter = button.dataset.filter;
-                    
-                    // Update button states
-                    filterButtons.forEach(btn => btn.classList.remove('active'));
-                    button.classList.add('active');
-                    
-                    // Filter videos
-                    showVideos(filter);
-                });
-            });
-    
-            function showVideos(filter) {
-                // Clear existing videos
-                videoContainer.innerHTML = '';
-    
-                // Filter and show videos
-                const filteredVideos = allVideos.filter(video => {
-                    return filter === 'all' || video.dataset.tag === filter;
-                });
-    
-                // Re-append filtered videos
-                filteredVideos.forEach(video => {
-                    videoContainer.appendChild(video.cloneNode(true));
-                });
-            }
-        });
-         function checkKey() {
-            const correctKey = "777777";
-            let userKey = prompt("Enter the key to proceed:");
-
-            if (userKey === correctKey) {
-                window.location.href = "next.html";
-            } else {
-                alert("Incorrect key! Please try again.");
-            }
-        }
-    </script>
+    <script src="videos.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
-
-
-
