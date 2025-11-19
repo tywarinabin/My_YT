@@ -56,6 +56,15 @@ const videoData = [
         // Entertainment Video - Example
         iframe: `<iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Entertainment Show" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
         category: "entertainment"
-    }
+    },
+    {
+        iframe:`<iframe width="862" height="485" src="https://www.youtube.com/embed/GBu54m0cEvg" title="Sushant KC - Aama" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
+        category:"music"
+    },
+    // Template Format
+    {
+        iframe:` `,
+        category:"todo"
+    },
     
 ];
