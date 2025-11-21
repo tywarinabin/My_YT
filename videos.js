@@ -61,10 +61,14 @@ const videoData = [
         iframe:`<iframe width="862" height="485" src="https://www.youtube.com/embed/GBu54m0cEvg" title="Sushant KC - Aama" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
         category:"music"
     },
+     {
+        iframe:`<iframe width="1422" height="889" src="https://www.youtube.com/embed/MuVrsDfgwI0" title="Shreeman Narayan Narayan Hari Hari - Dhun" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
+        category:"bhajan"
+    },
     // Template Format
     {
-        iframe:` `,
-        category:"todo"
+        iframe:``,
+        category:""
     },
     
 ];
