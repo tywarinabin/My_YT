@@ -69,6 +69,10 @@ const videoData = [
         iframe:`<iframe width="862" height="485" src="https://www.youtube.com/embed/mpQfVNcLHGA" title="The Essential Guide to Load Balancing Strategies and Techniques" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
         category:"education"
     },
+    {
+        iframe:`<iframe width="791" height="445" src="https://www.youtube.com/embed/tRScKDcYxlk?list=RDOnb6_bRJ0Bw" title="Jaikal Mahakal - Full Video | Goodbye | Amitabh Bachchan, Rashmika Mandanna| Amit Trivedi, Swanand K" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
+        category:"bhajan"
+    },
     // Template Format
     {
         iframe:``,
