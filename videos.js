@@ -73,6 +73,10 @@ const videoData = [
         iframe:`<iframe width="791" height="445" src="https://www.youtube.com/embed/tRScKDcYxlk?list=RDOnb6_bRJ0Bw" title="Jaikal Mahakal - Full Video | Goodbye | Amitabh Bachchan, Rashmika Mandanna| Amit Trivedi, Swanand K" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
         category:"bhajan"
     },
+    {
+        iframe:`<iframe width="783" height="458" src="https://www.youtube.com/embed/b_yDzgq5Gas?list=RDjeeAt7tCkY4" title="bhajan श्री ठाकुर बांके बिहारी भजन। वृंदावन  हरे,हरे रामा रामा,हरे कृष्णा,#vrindavan#video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
+        category:"bhajan"
+    },
     // Template Format
     {
         iframe:``,
